@@ -16,8 +16,7 @@ class ShopInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: getProportionateScreenHeight(350),
+      height: getProportionateScreenHeight(120),
       child: Padding(
         padding:
             EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(15)),
@@ -25,6 +24,7 @@ class ShopInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Card(
+              borderOnForeground: true,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -81,7 +81,7 @@ class ShopInfo extends StatelessWidget {
         ),
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[300],
         borderRadius: BorderRadius.circular(20),
       ),
     );

@@ -32,12 +32,12 @@ class HomePageBody extends StatelessWidget {
                   children: documents.map((doc) =>
                       GestureDetector(
                         onTap: () async {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => DocumentVerification(PANimg: doc['PAN Card'], GSTimg: doc['GST Certificate'], ACTimg: doc['Act Certificate'], AADHARimg: doc['Aadhar Card'],docId: doc['docID'],)));
+                          print(doc.id);
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => DocumentVerification(AADHARimg: doc['Aadhar Card'],ACTimg: doc['Act Certificate'], GSTimg: doc['GST Certificate'], PANimg: doc['PAN Card'],docId: doc.id,)));
                         },
                         child: ShopInfo(
-                          imageText: '',
                           shopName: doc['shopName'],
-                          shopAddress: doc['shopAddress'],
+                          shopAddress: doc['address'],
                           status: doc['shopStatus'],
                         ),
                       )).toList(),
