@@ -22,6 +22,7 @@ class HomePageBody extends StatelessWidget {
           SizedBox(
             height: getProportionateScreenWidth(10),
           ),
+          //Container
           Container(
             height: MediaQuery.of(context).size.height * 0.8,
             child: StreamBuilder <QuerySnapshot>(
